@@ -137,8 +137,8 @@ eagle new github.com/foo/bar
 
 ## 📖 开发规约
 
-- [配置说明](https://github.com/cokeBeer/eagle/blob/master/conf)
-- [错误码设计](https://github.com/cokeBeer/eagle/tree/master/pkg/errno)
+- [配置说明](https://github.com/cokeBeer/eagle/blob/master/config/local)
+- [错误码设计](https://github.com/go-eagle/eagle/blob/master/pkg/errcode)
 - [service 的使用规则](https://github.com/cokeBeer/eagle/blob/master/internal/service)
 - [repository 的使用规则](https://github.com/cokeBeer/eagle/blob/master/internal/repository)
 - [cache 使用说明](https://github.com/cokeBeer/eagle/blob/master/pkg/cache)
