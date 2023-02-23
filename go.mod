@@ -22,9 +22,6 @@ require (
 	github.com/gin-gonic/gin v1.7.7
 	github.com/go-kratos/aegis v0.1.1
 	github.com/go-mail/mail v2.3.1+incompatible
-	github.com/go-openapi/jsonreference v0.19.6 // indirect
-	github.com/go-openapi/spec v0.20.3 // indirect
-	github.com/go-openapi/swag v0.19.15 // indirect
 	github.com/go-playground/locales v0.13.0
 	github.com/go-playground/universal-translator v0.17.0
 	github.com/go-playground/validator/v10 v10.4.1
@@ -65,7 +62,7 @@ require (
 	github.com/streadway/amqp v0.0.0-20190827072141-edfb9018d271
 	github.com/stretchr/testify v1.7.1
 	github.com/swaggo/gin-swagger v1.2.0
-	github.com/swaggo/swag v1.7.0 // indirect
+	github.com/swaggo/swag v1.8.0
 	github.com/teris-io/shortid v0.0.0-20171029131806-771a37caa5cf
 	github.com/toolkits/net v0.0.0-20160910085801-3f39ab6fe3ce
 	github.com/uber/jaeger-client-go v2.25.0+incompatible

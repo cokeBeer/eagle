@@ -1,8 +1,12 @@
 use mysql;
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
 GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'root';
+FLUSH PRIVILEGES;
 
 # create test_user
+drop user 'test_user'@'%';
+FLUSH PRIVILEGES;
+
 CREATE USER 'test_user'@'%' IDENTIFIED BY '123456';
 GRANT ALL ON *.* to test_user@'%' IDENTIFIED BY '123456';
 

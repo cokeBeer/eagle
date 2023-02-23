@@ -1,15 +1,5 @@
 # 🦅 eagle
 
- [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/go-eagle/eagle/Go?style=flat-square)](https://github.com/go-eagle/eagle)
- [![codecov](https://codecov.io/gh/go-eagle/eagle/branch/master/graph/badge.svg)](https://codecov.io/gh/go-eagle/eagle)
- [![GolangCI](https://golangci.com/badges/github.com/golangci/golangci-lint.svg)](https://golangci.com)
- [![godoc](https://godoc.org/github.com/go-eagle/eagle?status.svg)](https://godoc.org/github.com/go-eagle/eagle)
- [![Gitter](https://badges.gitter.im/go-eagle/eagle.svg)](https://gitter.im/go-eagle/eagle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
- <a href="http://opentracing.io"><img src="https://img.shields.io/badge/OpenTracing-enabled-blue.svg" alt="OpenTracing Badge"></a>
- [![Go Report Card](https://goreportcard.com/badge/github.com/go-eagle/eagle)](https://goreportcard.com/report/github.com/go-eagle/eagle)
- [![gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://github.com/carloscuesta/gitmoji)
- [![License](https://img.shields.io/github/license/go-eagle/eagle?style=flat-square)](/LICENSE)
-
 一款适合于快速开发业务的 Go 框架，可快速构建 API 服务 或 Web 网站。
 
 ## 官方文档
@@ -53,7 +43,7 @@
 ├── api                          # grpc客户端和Swagger 文档
 ├── cmd                          # 脚手架目录
 ├── config                       # 配置文件统一存放目录
-├── docs                         # 框架相关文档
+├── docs                         # swag生成的swagger接口文档
 ├── internal                     # 业务目录
 │   ├── cache                    # 基于业务封装的cache
 │   ├── handler                  # http 接口
@@ -81,7 +71,7 @@ TIPS: 需要本地安装MySQL数据库和 Redis
 
 ```bash
 # 下载安装，可以不用是 GOPATH
-git clone https://github.com/go-eagle/eagle
+git clone https://github.com/cokeBeer/eagle
 
 # 进入到下载目录
 cd eagle
@@ -99,7 +89,7 @@ make build
 
 ```bash
 # 下载
-go get github.com/go-eagle/eagle/cmd/eagle
+go get github.com/cokeBeer/eagle/cmd/eagle
 
 export GO111MODULE=on
 # 或者在.bashrc 或 .zshrc中加入
@@ -147,11 +137,11 @@ eagle new github.com/foo/bar
 
 ## 📖 开发规约
 
-- [配置说明](https://github.com/go-eagle/eagle/blob/master/conf)
-- [错误码设计](https://github.com/go-eagle/eagle/tree/master/pkg/errno)
-- [service 的使用规则](https://github.com/go-eagle/eagle/blob/master/internal/service)
-- [repository 的使用规则](https://github.com/go-eagle/eagle/blob/master/internal/repository)
-- [cache 使用说明](https://github.com/go-eagle/eagle/blob/master/pkg/cache)
+- [配置说明](https://github.com/cokeBeer/eagle/blob/master/conf)
+- [错误码设计](https://github.com/cokeBeer/eagle/tree/master/pkg/errno)
+- [service 的使用规则](https://github.com/cokeBeer/eagle/blob/master/internal/service)
+- [repository 的使用规则](https://github.com/cokeBeer/eagle/blob/master/internal/repository)
+- [cache 使用说明](https://github.com/cokeBeer/eagle/blob/master/pkg/cache)
 
 ## 🚀 部署
 
@@ -172,7 +162,7 @@ eagle new github.com/foo/bar
 docker-compose up -d
 
 # 验证
-http://127.0.0.1/health
+http://127.0.0.1:8080/health
 ```
 
 ### Supervisord
@@ -191,7 +181,7 @@ go build -o bin_eagle
 export GOROOT=/usr/local/go1.13.8
 export GOPATH=/data/build/test/src
 export GO111MODULE=on
-cd /data/build/test/src/github.com/go-eagle/eagle
+cd /data/build/test/src/github.com/cokeBeer/eagle
 /usr/local/go1.13.8/bin/go build -o /data/build/bin/bin_eagle -mod vendor main.go
 rsync -av /data/build/bin/ x.x.x.x:/home/go/eagle
 supervisorctl restart eagle
@@ -223,34 +213,6 @@ stderr_logfile_backups=10
 ```bash
 supervisorctl restart eagle
 ```
-
-## 📜 CHANGELOG
-
-- [更新日志](https://github.com/go-eagle/eagle/blob/master/CHANGELOG.md)
-
-## 🏘️ 谁在用
-
-- [1024课堂](https://1024casts.com)
-- [FastIM](https://github.com/1024casts/fastim)
-- [Go微服务实战项目](https://github.com/go-microservice)
-
-## 💬 Discussion
-
-- Issue: https://github.com/go-eagle/eagle/issues
-- QQ交流群：1074476202
-- Gitter: https://gitter.im/go-eagle/eagle
-- 微信交流群
-<img src="https://user-images.githubusercontent.com/3043638/159420999-e00a667d-a5d9-404b-876a-ba0bc94981b9.jpeg" width="200px">
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/go-eagle/eagle.svg)](https://starchart.cc/go-eagle/eagle)
-
-## 🔋 JetBrains 开源证书支持
-
-`eagle` 项目一直以来都是在 JetBrains 公司旗下的 GoLand 集成开发环境中进行开发，基于 **free JetBrains Open Source license(s)** 正版免费授权，在此表达我的谢意。
-
-<a href="https://www.jetbrains.com/?from=go-eagle/eagle" target="_blank"><img src="https://raw.githubusercontent.com/panjf2000/illustrations/master/jetbrains/jetbrains-variant-4.png" width="200" align="middle"/></a>
 
 ## 📄 License
 

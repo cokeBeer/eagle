@@ -22,6 +22,8 @@ import (
 	"github.com/spf13/pflag"
 	_ "go.uber.org/automaxprocs"
 
+	_ "github.com/go-eagle/eagle/docs"
+
 	"github.com/go-eagle/eagle/internal/model"
 	"github.com/go-eagle/eagle/internal/repository"
 	"github.com/go-eagle/eagle/internal/server"

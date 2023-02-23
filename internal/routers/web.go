@@ -32,7 +32,7 @@ func LoadWebRouter(g *gin.Engine) *gin.Engine {
 
 	//new template engine
 	router.HTMLRender = gintemplate.New(gintemplate.TemplateConfig{
-		Root:      "internal/templates",
+		Root:      "eagle/internal/templates",
 		Extension: ".html",
 		Master:    "layouts/master",
 		Partials:  []string{},
